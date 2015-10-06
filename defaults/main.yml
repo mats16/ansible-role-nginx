@@ -1,0 +1,14 @@
+version: '1.9.5'
+
+user: 'nginx'
+worker_processes: 'auto'
+worker_rlimit_nofile: '4096'
+worker_connections: '1024'
+keepalive_timeout: '180'
+proxy_timeout: '60'
+uwsgi_timeout: '60'
+
+logrotate_file: '/var/log/nginx/*.log'
+logrotate_period: '10'
+
+custom_conf: []
