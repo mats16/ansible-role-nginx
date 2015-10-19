@@ -1,14 +1,15 @@
-version: ''
+nginx_version: ""
 
-user: 'nginx'
-worker_processes: 'auto'
-worker_rlimit_nofile: '4096'
-worker_connections: '1024'
-keepalive_timeout: '180'
-proxy_timeout: '60'
-uwsgi_timeout: '60'
+nginx_user: nginx
+nginx_error_log_file: /var/log/nginx/error.log
+nginx_error_log_level: warn
+nginx_pid: /var/run/nginx.pid
 
-logrotate_file: '/var/log/nginx/*.log'
-logrotate_period: '10'
+nginx_worker_processes: auto
+nginx_worker_rlimit_nofile: 4096
+nginx_worker_connections: 1024
 
-custom_conf: []
+nginx_keepalive_timeout: 180
+
+logrotate_file: "/var/log/nginx/*.log"
+logrotate_period: 10

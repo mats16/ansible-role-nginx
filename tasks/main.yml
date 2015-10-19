@@ -8,7 +8,7 @@
 
 - name: install
   apt:
-    name: "nginx={{ version }}*"
+    name: "nginx={{ nginx_version }}*"
     state: present
     force: yes
   notify: restart nginx
@@ -28,16 +28,6 @@
     owner: root
     group: root
     mode: 0644
-  notify: restart nginx
-
-- name: modify custom conf
-  template:
-    src: "conf.d/{{ item }}"
-    dest: "/etc/nginx/conf.d/{{ item }}"
-    owner: root
-    group: root
-    mode: 0644
-  with_items: "{{ custom_conf }}"
   notify: restart nginx
 
 - name: modify geocountry.conf
