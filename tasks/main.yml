@@ -11,6 +11,7 @@
     name: "nginx={{ nginx_version }}*"
     state: present
     force: yes
+    update_cache: yes
   notify: restart nginx
 
 - name: delete example config
