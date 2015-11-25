@@ -1,3 +1,7 @@
+- name: modify apt-key
+  apt_key: 
+    url: "http://nginx.org/keys/nginx_signing.key"
+
 - name: modify repository
   apt_repository:
     repo: "{{ item }}"
