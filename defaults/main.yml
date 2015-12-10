@@ -11,5 +11,5 @@ nginx_worker_connections: 1024
 
 nginx_keepalive_timeout: 180
 
-logrotate_file: "/var/log/nginx/*.log"
-logrotate_period: 10
+nginx_logrotate_file: "/var/log/nginx/*.log"
+nginx_logrotate_period: 10

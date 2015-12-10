@@ -1,7 +1,7 @@
-{{ logrotate_file }} {
+{{ nginx_logrotate_file }} {
         daily
         missingok
-        rotate {{ logrotate_period }}
+        rotate {{ nginx_logrotate_period }}
         compress
         notifempty
         create 644 nginx adm
